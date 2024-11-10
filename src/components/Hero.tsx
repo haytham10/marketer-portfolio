@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
 export default function Hero() {
@@ -6,7 +5,7 @@ export default function Hero() {
     <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img 
-          src="https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&q=80"
+          src="https://images.unsplash.com/photo-1665470909901-162912ec16f7?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Background" 
           className="w-full h-full object-cover"
         />
