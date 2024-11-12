@@ -11,6 +11,7 @@ export default {
         'subtle-zoom': 'subtleZoom 20s ease-in-out infinite',
         'width': 'width 0.8s ease-out forwards',
         'scroll': 'scroll 2s ease infinite',
+        'spin-slow': 'spin 8s linear infinite',
       },
       keyframes: {
         fadeInUp: {
@@ -41,6 +42,10 @@ export default {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(8px)' },
         },
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(var(--tw-gradient-stops))',
       },
     },
   },

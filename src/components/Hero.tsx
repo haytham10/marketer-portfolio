@@ -1,4 +1,5 @@
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
@@ -14,27 +15,46 @@ export default function Hero() {
       </div>
       
       <div className="relative z-10 text-center px-6 sm:px-4 max-w-4xl mx-auto">
-        <div className="animate-fade-in-up space-y-4 sm:space-y-6">
-          <div className="flex items-center justify-center gap-2 mb-2 sm:mb-4 animate-float">
-            <Sparkles className="text-yellow-400 w-4 h-4 sm:w-5 sm:h-5" />
-            <span className="text-yellow-400 text-base sm:text-lg font-medium">Elevate Your Social Presence</span>
-            <Sparkles className="text-yellow-400 w-4 h-4 sm:w-5 sm:h-5" />
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="space-y-4 sm:space-y-6"
+        >
+          <div className="flex items-center justify-center gap-2 mb-2 sm:mb-4 animate-pulse">
+            <Sparkles className="text-yellow-400 w-6 h-6" />
+            <span className="text-yellow-400 text-lg sm:text-xl font-semibold">
+              Unleash Your Brand's Potential
+            </span>
+            <Sparkles className="text-yellow-400 w-6 h-6" />
           </div>
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-white animate-gradient-x tracking-tight leading-tight">
-            I'm Haytham
+
+          <h1 className="text-5xl sm:text-7xl md:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 tracking-tight leading-tight">
+            Crafting Digital Narratives
           </h1>
-          <div className="h-1 w-16 sm:w-24 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-4 sm:mb-8 animate-width"></div>
-          <p className="text-xl sm:text-2xl md:text-3xl text-indigo-200 mb-4 sm:mb-8 font-light animate-fade-in-up delay-200">
-            Your Strategic Partner in Social Media Dominance
+
+          <div className="h-1 w-20 sm:w-28 bg-gradient-to-r from-green-400 to-blue-500 mx-auto mb-4 sm:mb-8">
+            <motion.div
+              initial={{ width: 0 }}
+              animate={{ width: '100%' }}
+              transition={{ duration: 1 }}
+              className="h-1 bg-gradient-to-r from-blue-500 to-purple-600"
+            />
+          </div>
+
+          <p className="text-2xl sm:text-3xl md:text-4xl text-white mb-4 sm:mb-8 font-light">
+            Transforming Visions into Vibrant Realities
           </p>
-          <p className="text-lg sm:text-xl text-indigo-100 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-300">
-            Transforming brands into social media powerhouses through data-driven strategies, compelling storytelling, and proven growth techniques.
+
+          <p className="text-xl sm:text-2xl text-white mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
+            Join me on a journey to elevate your brand through innovative strategies, captivating content, and a touch of creative magic.
           </p>
-          <button className="group w-full sm:w-auto bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-semibold active:scale-95 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(99,102,241,0.5)] flex items-center justify-center gap-2 mx-auto animate-fade-in-up delay-400">
-            Transform Your Brand
-            <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" size={20} />
+
+          <button className="group w-full sm:w-auto bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-4 rounded-full text-lg sm:text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:bg-gradient-to-l hover:from-blue-500 hover:to-green-400 flex items-center justify-center gap-3 mx-auto">
+            Discover What's Possible
+            <ArrowRight className="group-hover:translate-x-2 transition-transform duration-300" size={24} />
           </button>
-        </div>
+        </motion.div>
       </div>
       
       <div className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 animate-float">
