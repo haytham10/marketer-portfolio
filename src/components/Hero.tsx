@@ -10,8 +10,8 @@ export default function Hero() {
           alt="Background" 
           className="w-full h-full object-cover scale-105 animate-subtle-zoom"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/90 via-indigo-900/90 to-black/90 backdrop-blur-sm animate-gradient" />
         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-30 mix-blend-soft-light"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/90 via-indigo-900/90 to-black/90 backdrop-blur-sm animate-gradient" />
       </div>
       
       <div className="relative z-10 text-center px-6 sm:px-4 max-w-4xl mx-auto">
